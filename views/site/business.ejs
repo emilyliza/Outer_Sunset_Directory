@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div>
+
+<p> Business Details: </p> <% businesses.forEach(function(business){ %>
+	<ul>
+		<li><a href="/v2/search?<%= business.id %>">
+		<li>Name: <%= business.name %></li>
+		</a>
+		<li>Phone: <%= business.display_phone %></li>
+		<li><embed src="<%= business.image_url %>"></li>
+		<li>Rating:<%= business.rating %></li>
+		
+		<li><form method="POST" action="/favorites">
+			<input type="text" style="display: none;"
+			value="<%= business.busId%>" name="busId">
+					<button>Favorite</button>
+				</form></li>
+
+	</ul>
+<% }) %>
+</div>
+
+</body>
+</html>

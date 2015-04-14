@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1> This is where a list of Biking options will go</h1>
+
+<p> Biking options: </p> <% businesses.forEach(function(business){ %>
+	<ul>
+		<li>Name: <%= business.name %></li>
+		<li>Phone: <%= business.display_phone %></li>
+		<li><embed src="<%= business.image_url %>"></li>
+		<li>Rating:<%= business.rating %></li>
+
+	</ul>
+<% }) %>
+</body>
+</html>

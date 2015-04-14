@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1> This is where a list of Parks will go</h1>
+
+<div>
+
+<p> Parks: </p> <% businesses.forEach(function(business){ %>
+	<ul>
+		
+		<li><a href="/v2/search?<%= business.busId %>">
+		<li>Name: <%= business.name %></li>
+		</a>
+		<li>Phone: <%= business.display_phone %></li>
+		<li><embed src="<%= business.image_url %>"></li>
+		<li>Rating: <%= business.rating %></li>
+
+	</ul>
+<% }) %>
+</div>
+
+</body>
+</html>
