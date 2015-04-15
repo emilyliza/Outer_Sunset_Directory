@@ -11,12 +11,17 @@
 <p> Parks: </p> <% businesses.forEach(function(business){ %>
 	<ul>
 		
-		<li><a href="/v2/search?<%= business.busId %>">
-		<li>Name: <%= business.name %></li>
-		</a>
-		<li>Phone: <%= business.display_phone %></li>
+		<li><a href="<%= business.url %>">Name: <%= business.name %></a></li>
 		<li><embed src="<%= business.image_url %>"></li>
-		<li>Rating: <%= business.rating %></li>
+		<li>Location: <%= business.location %></li>
+		<li>Phone: <%= business.display_phone %></li>
+		<li>Rating: <%= business.rating %></li> 
+		<li><form method="POST" action="/favorites">
+				<input name="name" value="<%= business.name %>" hidden>
+				<input name="phone" value="<%= business.phone %>" hidden>
+				<input name="url" value="<%= business.url %>" hidden>
+				<button>Favorite</button>
+			</form></li>
 
 	</ul>
 <% }) %>

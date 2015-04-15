@@ -11,7 +11,13 @@ module.exports = {
       businessName: {
         type: DataTypes.STRING
       },
-      userId: {
+      businessUrl: {
+        DataTypes.STRING
+      }
+      businessPhone: {
+        DataTypes.STRING
+      }
+      UserId: {
         type: DataTypes.INTEGER
       },
       createdAt: {

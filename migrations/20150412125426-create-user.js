@@ -14,6 +14,9 @@ module.exports = {
       email: {
         type: DataTypes.STRING
       },
+      passwordDigest: {
+        type: DataTypes.STRING
+      },
       createdAt: {
         allowNull: false,
         type: DataTypes.DATE

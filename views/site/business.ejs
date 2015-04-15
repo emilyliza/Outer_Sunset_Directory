@@ -9,22 +9,27 @@
 
 <p> Business Details: </p> <% businesses.forEach(function(business){ %>
 	<ul>
-		<li><a href="/v2/search?<%= business.id %>">
-		<li>Name: <%= business.name %></li>
-		</a>
+		<li><a href="<%= business.url %>">Name: <%= business.name %></a></li>
 		<li>Phone: <%= business.display_phone %></li>
 		<li><embed src="<%= business.image_url %>"></li>
 		<li>Rating:<%= business.rating %></li>
 		
 		<li><form method="POST" action="/favorites">
-			<input type="text" style="display: none;"
-			value="<%= business.busId%>" name="busId">
+			<input type="checkbox "<value="<%= business.busId%>" name="busId">
 					<button>Favorite</button>
 				</form></li>
 
 	</ul>
 <% }) %>
 </div>
+
+<ul>
+			<% fav.forEach(function(bus){ %>
+				<li>
+					businessName: <%= bus.businessName %>
+				</li>
+			<% }) %>
+		</ul>
 
 </body>
 </html>

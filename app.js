@@ -80,7 +80,7 @@ app.get('/profile', function (req, res) {
       db.Favorite.findAll({where: {UserId: guest.id}})
         .then(function(places){
           console.log("This should be our user Id" + UserId);
-      res.render('guests/profile', {user: guest, fav: places});
+      res.render('guests/profile', {user: guest, bs: places });
     });
     } else {
       res.redirect('/login');
@@ -130,27 +130,30 @@ app.get('/search', function(req, res) {
 }
 });
 
-app.get('/business', function(req,res){
-  var busId = req.query.id;
-  console.log("This is the business id " + busId);
+// app.get('/business', function(req,res){
+//   req.currentUser().then(function(guest){
+//     if(guest) {
+//       res.render("business", {businesses: data.businesses});  
+//     }
+//     else {
 
-  var url = 'http://api.yelp.com/v2/search?='+busId;
-  request(url, function(err, resp, body){
-    if (!err && resp.statusCode === 200) {
-      res.render("business", {businesses: data.businesses});  
-    }
-  });
-});
+//     }
+//   });
+// });
 
 app.post('/favorites', function(req,res){
-  var busId = req.query.id;
+  var name =req.body.name;
+  var phone = req.body.phone;
+  var url = req.body.url;
+
   req.currentUser().then(function(guest){
     if (guest) {
+      console.log("hello");
       guest.addToFavs(db, name, phone, url).then(function(business){
-        res.redirect('guests/profile');
+        res.redirect('/profile');
       });
     } else {
-      res.redirect('guests/login');
+      res.redirect('/login');
     }
   });
 });
@@ -269,10 +272,10 @@ app.get('/sync', function(req, res) {
   })
 })
 
-
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log("Hello there, I'm listening");
-});
+});)
+
 
 
 
