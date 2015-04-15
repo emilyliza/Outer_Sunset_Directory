@@ -12,11 +12,11 @@ module.exports = {
         type: DataTypes.STRING
       },
       businessUrl: {
-        DataTypes.STRING
-      }
+        type: DataTypes.STRING
+      },
       businessPhone: {
-        DataTypes.STRING
-      }
+        type: DataTypes.STRING
+      },
       UserId: {
         type: DataTypes.INTEGER
       },
