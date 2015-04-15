@@ -23,6 +23,9 @@
     "request": "^2.55.0",
     "sequelize": "^2.0.5",
     "sequelize-cli": "^1.6.0",
-    "yelp": "^0.2.0"
+    "yelp": "^0.2.0",
+    "engines": {
+    "node": "v0.12.0"
+  }
   }
 }
