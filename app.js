@@ -77,11 +77,11 @@ app.get('/profile', function (req, res) {
   req.currentUser().then(function(guest){
     if (guest) {
       console.log("hello the profile page is working");
-      db.Favorite.findAll({where: {UserId: guest.id}})
-        .then(function(places){
-          console.log("This should be our user Id" + UserId);
-      res.render('guests/profile', {user: guest, bs: places });
-    });
+      db.Favorite.findAll({where: {userId: this.id}, include: db.User})
+        .then(function(favs){
+          console.log("Are we getting here?", favs);
+          res.render('guests/profile', {user: guest, bus: favs});
+        });
     } else {
       res.redirect('/login');
     }
@@ -129,17 +129,6 @@ app.get('/search', function(req, res) {
   })
 }
 });
-
-// app.get('/business', function(req,res){
-//   req.currentUser().then(function(guest){
-//     if(guest) {
-//       res.render("business", {businesses: data.businesses});  
-//     }
-//     else {
-
-//     }
-//   });
-// });
 
 app.post('/favorites', function(req,res){
   var name =req.body.name;

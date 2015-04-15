@@ -8,6 +8,11 @@ module.exports = {
         primaryKey: true,
         type: DataTypes.INTEGER
       },
+      
+      userId: {
+        type: DataTypes.INTEGER,
+      },
+
       businessName: {
         type: DataTypes.STRING
       },
@@ -17,9 +22,7 @@ module.exports = {
       businessPhone: {
         type: DataTypes.STRING
       },
-      UserId: {
-        type: DataTypes.INTEGER
-      },
+      
       createdAt: {
         allowNull: false,
         type: DataTypes.DATE

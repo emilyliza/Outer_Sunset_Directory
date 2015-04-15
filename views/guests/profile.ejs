@@ -15,6 +15,15 @@
 <h2>Hello <%= user.email %> </h2>
 
 <br>
+
+	<ul>
+			<% bus.forEach(function (fav){ %>
+				<li>
+					Business name: <%= fav.businessName %>
+				</li>
+			<% }); %>
+	</ul>
+
 <form method="POST" action="/logout?_method=DELETE">
 			<button>Logout</button>
 		</form>
