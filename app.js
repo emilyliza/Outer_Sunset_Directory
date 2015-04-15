@@ -90,13 +90,13 @@ app.get('/profile', function (req, res) {
 
 //creates a new user
 app.post('/signup', function(req,res){
-  var firstName = req.body.firstName;
   var email = req.body.email;
   var password = req.body.password;
-  console.log("this is supposed ot be the name " + firstName);
-  db.User.createSecure(firstName, email, password)
+
+  db.User.createSecure(email, password)
     .then(function(user){
-      res.redirect("/profile");
+      req.login(user);
+      res.render("guests/profile", {user: user});
     });
 });
 
@@ -109,7 +109,7 @@ app.post('/login', function(req,res){
     .then(function(user){
       if(user) {
         req.login(user);
-        res.render('guests/profile');
+        res.render('guests/profile', {user: user});
       } else {
         console.log("Nadda, no user.")
         res.redirect('/login');
