@@ -17,9 +17,7 @@
     <link href="style.css" rel="stylesheet">
 
   </head>
-
   <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -29,63 +27,57 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/signup">Sign Up</a>
+          <a class="navbar-brand" href="/signup">Greetings Airbnb Guests!</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" method="POST" action="/signup">
+        <form class="navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+            <a class="btn btn-success" href="/login" role="button">Log in &raquo;</a>
             </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
+            
+  </form>
+        
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron" id="ob">
       <div class="container">
         <h2>Welcome to the Outer Sunset</h2>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Sign Up &raquo;</a></p>
+        <p>This is an app designed to make it easier for airbnb to browse local businesses and activities.</p>
+        <p><a class="btn btn-primary btn-lg" href="/signup" role="button">Sign Up &raquo;</a></p>
       </div>
     </div>
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <h2>Dining</h2>
            <ul>
-            <li><a href="/coffeeshops">Coffee Shops</a></li>
-            <li><a href="/restaurants">Restaurants</a></li>
-            <li><a href="/bars">Bars</a></li>
+            <li><a href="/coffeeshops"><h4>Coffee Shops</h4></a></li>
+            <li><a href="/restaurants"><h4>Restaurants</h4></a></li>
+            <li><a href="/bars"><h4>Bars</h4></a></li>
           </ul>
-          <p><a class="btn btn-default" href="/search" role="button">Search &raquo;</a></p>
+          
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <h2>Getting Around</h2>
           <ul>
-            <li><a href="/cabs">Cab Services</a></li>
-            <li><a href="/publictransit">Public Transit</a></li>
-            <li><a href="/biking">Biking</a></li>
+            <li><a href="/cabs"><h4>Cab Services</h4></a></li>
+            <li><a href="/publictransit"><h4>Public Transit</h4></a></li>
+            <li><a href="/biking"><h4>Biking</h4></a></li>
           </ul>
-          <p><a class="btn btn-default" href="/search" role="button">Search &raquo;</a></p>
        </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <h2>Activities</h2>
            <ul>
-            <li><a href="/museums">Museums</a></li>
-            <li><a href="/parks">Parks</a></li>
-            <li><a href="/kids">Kids</a></li>
+            <li><a href="/museums"><h4>Museums</h4></a></li>
+            <li><a href="/parks"><h4>Parks</h4></a></li>
+            <li><a href="/kids"><h4>Kids</h4></a></li>
           </ul>
-          <p><a class="btn btn-default" href="/search" role="button">Search &raquo;</a></p>
         </div>
-      </div>
-
+</div>
       <hr>
 
       <footer>

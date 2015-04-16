@@ -1,0 +1,13 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.jumbotron {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-image: url('Cliff_House_from_Ocean_Beach.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+

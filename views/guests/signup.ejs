@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
   <% include ../partials/head %>
 </head>
-<body class="container">
-
   <header>
     <% include ../partials/header2%>
    </header>
-  
+  <body>
+
   <div class="jumbotron">
       <div class="container">
         <h2>Glad you are here!</h2>
 
-        <p>Please sign up to browse andcreate a list of favorite places.</p>
+        <p>Please sign up to browse and create a list of favorite places.</p>
+        
         <form method="POST" action="/signup"> 
     <div>
       <input type="text" name="email" placeholder="email">
@@ -22,7 +21,9 @@
     <div>
       <input type="password" name="password" placeholder="password">
     </div>
-    <p><a class="btn btn-primary btn-lg" role="button">Sign Up &raquo;</a></p>
+    <br>
+    <br>
+    <p><button>Sign Up</button>
   </form>
         
       </div>

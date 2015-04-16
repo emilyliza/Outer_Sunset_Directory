@@ -172,7 +172,7 @@ app.post('/favorites', function(req,res){
 //allows user to sign out & redirects to log in page
 app.delete('/logout', function(req,res){
   req.logout();
-  res.redirect('/login');
+  res.redirect('site/index');
 });
 
 //renders dining page

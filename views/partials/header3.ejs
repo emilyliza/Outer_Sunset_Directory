@@ -1,4 +1,4 @@
- <nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -11,8 +11,10 @@
         </div>
         <form class="navbar-form navbar-right">
             <div class="form-group">
-            <p><a class="btn btn-success" href="/search" role="button">Search &raquo;</a>
-            </div></p>
+            <form method="POST" action="/logout?_method=DELETE">
+            <a class="btn btn-success" type="button">Log Out &raquo;</a>
+          </form>
+            </div>
             
   </form>
         

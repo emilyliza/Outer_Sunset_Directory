@@ -1,19 +1,39 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title></title>
+  <% include ../partials/head %>
 </head>
-<body>
-<h1> This is where a list of Cab services will go</h1>
+  <header>
+    <% include ../partials/header2%>
+   </header>
+  <body>
 
-<p> Cab Services: </p> <% businesses.forEach(function(business){ %>
+  <div class="jumbotron">
+      <div class="container">
+        <br>
+        <br>
+        <h2> Cab Services: </h2> 
+
+        <% businesses.forEach(function(business){ %>
 	<ul>
 		<li>Name: <%= business.name %></li>
 		<li>Phone: <%= business.display_phone %></li>
 		<li><embed src="<%= business.image_url %>"></li>
 		<li>Rating:<%= business.rating %></li>
-
+		<li><form method="POST" action="/favorites">
+		      <input name="name" value="<%= business.name %>" hidden>
+		      <input name="phone" value="<%= business.phone %>" hidden>
+		      <input name="url" value="<%= business.url %>" hidden>
+		      <button>Favorite</button>
+        	</form>	
+        </li>	
 	</ul>
 <% }) %>
+        
+      </div>
+    </div>  
+<footer>
+        <p>&copy; Emily Hittle, GA</p>
+      </footer>
 </body>
 </html>

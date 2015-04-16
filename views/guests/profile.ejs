@@ -1,18 +1,39 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title></title>
+  <% include ../partials/head %>
 </head>
-<body>
-<h1> Profile Page </h1>
+<body class="container">
 
+  <header>
+    <% include ../partials/header2%>
+   </header>
+
+<body>
+
+<div class="jumbotron">
+      <div class="container">
+     	<h2>Hello <i><%= user.email %> </i></h2>
+        <p>Please take some time to view the wonderful eateries, parks and other attractions in the Outer Sunset. If you find something you like, click the favorite button (below each business description) and it will be saved to this page for future reference. </p>
+
+        <p> Are you looking for something not listed? Cick below to create a unique search.</p>       
+        <p><a class="btn btn-primary btn-lg" href="/search" role="button">Search &raquo;</a></p>
+      </div>
+    </div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-4">
 <a href="/activities">Activities</a><br>
 <a href="/dining">Dining</a><br>
 <a href="/travel">Travel</a><br>
 <a href="/parks">Parks: testing favorites page</a><br>
 <a href="/favorites"> My Favorites</a>
 
-<h2>Hello <%= user.email %> </h2>
 
+
+<form method="POST" action="/logout?_method=DELETE">
+			<button>Logout</button>
+		</form>
 </body>
 </html>
