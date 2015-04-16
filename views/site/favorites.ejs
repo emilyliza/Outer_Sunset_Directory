@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -10,9 +11,22 @@
 <a href="/dining">Dining</a><br>
 <a href="/travel">Travel</a><br>
 <a href="/parks">Parks: testing favorites page</a><br>
-<a href="/favorites"> My Favorites</a>
+<a href="/favorites">Favorites</a>
 
 <h2>Hello <%= user.email %> </h2>
 
+<br>
+
+	<ul>
+			<% bus.forEach(function (p){ %>
+				<li>
+					Business name: <%= p.businessName %>
+				</li>
+			<% }); %>
+	</ul>
+
+<form method="POST" action="/logout?_method=DELETE">
+			<button>Logout</button>
+		</form>
 </body>
 </html>

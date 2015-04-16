@@ -11,10 +11,10 @@ var express = require("express"),
 var env = process.env;
 
 var yelp = require("yelp").createClient({
-  consumer_key: env.YELP_C_KEY,
-  consumer_secret: env.YELP_C_SECRET,
-  token: env.YELP_T,
-  token_secret: env.YELP_T_SECRET
+  consumer_key: "AnWMDQQ2OarkWg9FlxgOmA",
+  consumer_secret: "c3SE2i_3wfBz0epXNsJ8RXGEjNI",
+  token: "MYTBGZZO0XhGX0vmAcxzt_tXXduE5_m6",
+  token_secret: "uxgqlThRXQpvAizY-_Nm8BbqhC0"
 });
 
 
@@ -48,11 +48,22 @@ app.use(methodOverride("_method"));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-//for styling, add public folder with css sheets: app.use(express.static('public'));
+app.use(express.static('public'));
 
 //renders home page
 app.get('/', function (req, res) {
 	res.render('site/index');
+});
+
+//renders example page
+app.get('/example', function(req, res) {
+    res.render('site/example');
+});
+
+
+//renders example2 page
+app.get('/example2', function(req, res) {
+    res.render('site/example2');
 });
 
 //renders sign up page
@@ -129,7 +140,17 @@ app.get('/search', function(req, res) {
   })
 }
 });
-
+app.get('/favorites',function(req,res){
+  req.currentUser().then(function(user){
+    db.Favorite.all({where: {userId: user.id}})
+    .then(function(favs){
+      res.render('site/favorites',{
+        user: user,
+        bus:favs
+      })
+    })
+  })
+})
 app.post('/favorites', function(req,res){
   var name =req.body.name;
   var phone = req.body.phone;
@@ -138,7 +159,8 @@ app.post('/favorites', function(req,res){
   req.currentUser().then(function(guest){
     if (guest) {
       console.log("hello");
-      guest.addToFavs(db, name, phone, url).then(function(business){
+      guest.addToFavs(db, name, phone, url).then(function(bus){
+        console.log(bus);
         res.redirect('/profile');
       });
     } else {

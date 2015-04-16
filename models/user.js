@@ -66,7 +66,7 @@ module.exports = function (sequelize, DataTypes){
         });
       },
       associate: function(models) {
-        this.hasMany(models.Review);
+        // this.hasMany(models.Review);
         this.hasMany(models.Favorite);
       }
 

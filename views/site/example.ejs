@@ -9,13 +9,12 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Outer Sunset</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
   </head>
 
@@ -30,10 +29,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Outer Sunset</a>
+          <a class="navbar-brand" href="/profile">Sign Up</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form method="POST" action="/login"> 
+          <form class="navbar-form navbar-right" method="POST" action="/login">
             <div class="form-group">
               <input type="text" placeholder="Email" class="form-control">
             </div>
@@ -49,9 +48,9 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Welcome Airbnb Guests!</h1>
+        <h2>Welcome to the Outer Sunset</h2>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Sign Up &raquo;</a></p>
       </div>
     </div>
 
@@ -60,18 +59,30 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Dining</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+           <ul>
+            <li><a href="/coffeeshops">Coffee Shops</a></li>
+            <li><a href="/restaurants">Restaurants</a></li>
+            <li><a href="/bars">Bars</a></li>
+          </ul>
+          <p><a class="btn btn-default" href="/search" role="button">Search &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Travel</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Getting Around</h2>
+          <ul>
+            <li><a href="/cabs">Cab Services</a></li>
+            <li><a href="/publictransit">Public Transit</a></li>
+            <li><a href="/biking">Biking</a></li>
+          </ul>
+          <p><a class="btn btn-default" href="/search" role="button">Search &raquo;</a></p>
        </div>
         <div class="col-md-4">
           <h2>Activities</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+           <ul>
+            <li><a href="/museums">Museums</a></li>
+            <li><a href="/parks">Parks</a></li>
+            <li><a href="/kids">Kids</a></li>
+          </ul>
+          <p><a class="btn btn-default" href="/search" role="button">Search &raquo;</a></p>
         </div>
       </div>
 
