@@ -3,33 +3,51 @@
 <head>
   <% include ../partials/head %>
 </head>
-<body class="container">
 
   <header>
-    <% include ../partials/header2%>
+    <% include ../partials/header3%>
    </header>
 
 <body>
 
 <div class="jumbotron">
       <div class="container">
+        <br>
+        <br>
      	<h2>Hello <i><%= user.email %> </i></h2>
-        <p>Please take some time to view the wonderful eateries, parks and other attractions in the Outer Sunset. If you find something you like, click the favorite button (below each business description) and it will be saved to this page for future reference. </p>
+        <p>Please take some time to view the wonderful eateries, parks and other attractions in the Outer Sunset. If you find something you like, click the favorite button (below each business description) and it will be saved to your favorites. </p>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Dining</h2>
+           <ul>
+            <li><a href="/coffeeshops"><h4>Coffee Shops</h4></a></li>
+            <li><a href="/restaurants"><h4>Restaurants</h4></a></li>
+            <li><a href="/bars"><h4>Bars</h4></a></li>
+          </ul>
+          
+        </div>
+        <div class="col-md-4">
+          <h2>Getting Around</h2>
+          <ul>
+            <li><a href="/cabs"><h4>Cab Services</h4></a></li>
+            <li><a href="/publictransit"><h4>Public Transit</h4></a></li>
+            <li><a href="/biking"><h4>Biking</h4></a></li>
+          </ul>
+       </div>
+        <div class="col-md-4">
+          <h2>Activities</h2>
+           <ul>
+            <li><a href="/museums"><h4>Museums</h4></a></li>
+            <li><a href="/parks"><h4>Parks</h4></a></li>
+            <li><a href="/kids"><h4>Kids</h4></a></li>
+          </ul>
+        </div>
 
         <p> Are you looking for something not listed? Cick below to create a unique search.</p>       
-        <p><a class="btn btn-primary btn-lg" href="/search" role="button">Search &raquo;</a></p>
+        <p><center><a class="btn btn-primary btn-lg" href="/search" role="button">Refine My Search &raquo;</a></center></p>
       </div>
     </div>
-
-<div class="container">
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-4">
-<a href="/activities">Activities</a><br>
-<a href="/dining">Dining</a><br>
-<a href="/travel">Travel</a><br>
-<a href="/parks">Parks: testing favorites page</a><br>
-<a href="/favorites"> My Favorites</a>
-
 
 
 <form method="POST" action="/logout?_method=DELETE">

@@ -4,8 +4,6 @@
 <head>
   <% include ../partials/head %>
 </head>
-<body class="container">
-
   <header>
     <% include ../partials/header2 %>
    </header>
@@ -13,6 +11,8 @@
 
   <div class="jumbotron">
       <div class="container">
+        <br>
+        <br>
         <h2>Greetings!</h2>
         <p> Please log in to browse local businesses and create a list of your favorite places.  
     <form method="POST" action="/login"> 
@@ -22,7 +22,8 @@
     <div>
       <input type="password" name="password" placeholder="password">
     </div>
-    <button>Login</button>
+    <br>
+    <button class="btn btn-primary btn-lg">Login</button>
   </form>
 </div>
       <hr>

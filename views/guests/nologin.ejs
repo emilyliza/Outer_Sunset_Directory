@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<html>
 <head>
   <% include ../partials/head %>
 </head>
   <header>
-    <% include ../partials/header2%>
+    <% include ../partials/header2 %>
    </header>
-  <body>
+  
 
   <div class="jumbotron">
       <div class="container">
         <br>
         <br>
-        <h2>Glad you are here!</h2>
-
-        <p>Please sign up to browse and create a list of favorite places.</p>
-
-        <form method="POST" action="/signup"> 
+        <h2>Oops! It looks like you have not created a profile yet.</h2>
+       
+    <form method="POST" action="/signup"> 
     <div>
       <input type="text" name="email" placeholder="email">
     </div>
@@ -27,14 +26,10 @@
     <br>
     <p><button class="btn btn-primary btn-lg">Sign Up</button>
   </form>
-        
-      </div>
-    </div>  
-<footer>
+</div>
+      <hr>
+
+      <footer>
         <p>&copy; Emily Hittle, GA</p>
       </footer>
-</body>
-</html>
-
-
-
+    </div> <!-- /container -->
