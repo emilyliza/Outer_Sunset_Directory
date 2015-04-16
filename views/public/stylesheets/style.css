@@ -2,12 +2,22 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+/*
+.jumbotron {
+background: url("../images/Cliff_House_from_Ocean_Beach.jpg") no-repeat center center !important;
+background-size: cover;
+}*/
+/*.jumbotron {
+    background: url("Cliff_House_from_Ocean_Beach.jpg") no-repeat center center !important; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}*/
+
 
 .jumbotron {
-  padding-top: 50px;
-  padding-bottom: 20px;
-  background-image: url('Cliff_House_from_Ocean_Beach.jpg') no-repeat center center;
-  background-size: cover;
+	background-color: green;
+	background-size: cover;
 }
-
-
+  

@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Search</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
+  <% include ../partials/head %>
 </head>
+  <header>
+    <% include ../partials/header2 %>
+   </header>
+  
 
-<body>
-<form method="GET" action="/search">
-    <input type="text" name="q" placeholder="Search">
-    <button>Submit</button>
+  <div class="jumbotron">
+      <div class="container">
+        <br>
+        <br>
+        <h2>Search for fabulous places...</h2>  
+    <form method="GET" action="/search">
+    <div><input type="text" name="q" placeholder="Search">
+    <button class= "btn btn-primary btn-sm">Submit</button></div>
   </form>
-
-<p> Businesses: </p> <% businesses.forEach(function(business){ %>
+<br>
+	 <% businesses.forEach(function(business){ %>
 	<ul>
 		<li>Name: <%= business.name %></li>
 		<li>Phone: <%= business.display_phone %></li>
@@ -31,5 +37,10 @@
 
 	</ul>
 <% }) %>
-</body>
-</html>
+</div>
+      <hr>
+
+      <footer>
+        <p>&copy; Emily Hittle, GA</p>
+      </footer>
+    </div> <!-- /container -->

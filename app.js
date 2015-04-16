@@ -55,15 +55,9 @@ app.get('/', function (req, res) {
 	res.render('site/index');
 });
 
-//renders example page
-app.get('/example', function(req, res) {
-    res.render('site/example');
-});
-
-
-//renders example2 page
-app.get('/example2', function(req, res) {
-    res.render('site/example2');
+//renders Oops page
+app.get('/nologin', function(req, res) {
+    res.render('guests/nologin');
 });
 
 //renders sign up page
@@ -123,7 +117,7 @@ app.post('/login', function(req,res){
         res.render('guests/profile', {user: user});
       } else {
         console.log("Nadda, no user.")
-        res.redirect('/login');
+        res.redirect("/nologin");
       }
     }); 
 });
@@ -140,6 +134,8 @@ app.get('/search', function(req, res) {
   })
 }
 });
+
+//renders favorites page
 app.get('/favorites',function(req,res){
   req.currentUser().then(function(user){
     db.Favorite.all({where: {userId: user.id}})
@@ -151,6 +147,8 @@ app.get('/favorites',function(req,res){
     })
   })
 })
+
+//gets favorites and puts info in database
 app.post('/favorites', function(req,res){
   var name =req.body.name;
   var phone = req.body.phone;
@@ -161,7 +159,7 @@ app.post('/favorites', function(req,res){
       console.log("hello");
       guest.addToFavs(db, name, phone, url).then(function(bus){
         console.log(bus);
-        res.redirect('/profile');
+        res.redirect('/favorites');
       });
     } else {
       res.redirect('/login');
@@ -172,7 +170,7 @@ app.post('/favorites', function(req,res){
 //allows user to sign out & redirects to log in page
 app.delete('/logout', function(req,res){
   req.logout();
-  res.redirect('site/index');
+  res.render('site/index');
 });
 
 //renders dining page
