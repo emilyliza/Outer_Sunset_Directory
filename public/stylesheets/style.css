@@ -13,7 +13,9 @@ h2 {
 h3 {
   color: maroon;
 }
-
+h5 {
+  color: white;
+}
 a {
     color: #084B8A;
 }
@@ -58,7 +60,7 @@ a {
 }
 #pic4 {
   background: url("http://sfcitizen.com/blog/wp-content/uploads/2012/02/img_1055-copy1.jpg")no-repeat center center;
-  width: 100%;
+  background-size: cover;
 }
 #white {
   font-weight: bold;

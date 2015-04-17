@@ -9,15 +9,12 @@
           </button>
           <a class="navbar-brand" href="/">Home</a>
         </div>
-        <form class="navbar-form navbar-right">
-            <div class="form-group">
-            <a class="btn btn-success" href="/favorites" role="button">My Favorites &raquo;</a></form>
-            <form method="POST" action="/logout?_method=DELETE">
-            <button class="btn btn-success">Log Out </button>
-            </form>
+          <form class="navbar-form navbar-right" method="POST"  action="/logout?_method=DELETE">
+              <div class="form-group">
+                 <button class="btn btn-success">Log Out </button>
             </div>
             
-  </form>
+          </form>
         
         </div><!--/.navbar-collapse -->
       </div>
