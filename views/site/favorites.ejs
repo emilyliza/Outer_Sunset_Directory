@@ -1,19 +1,21 @@
-
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title></title>
+  <% include ../partials/head %>
 </head>
+
+  <header>
+    <% include ../partials/header3%>
+   </header>
+
 <body>
-<h1> Profile Page </h1>
 
-<a href="/activities">Activities</a><br>
-<a href="/dining">Dining</a><br>
-<a href="/travel">Travel</a><br>
-<a href="/parks">Parks: testing favorites page</a><br>
-<a href="/favorites">Favorites</a>
-
-<h2>Hello <%= user.email %> </h2>
+<div class="jumbotron">
+      <div class="container">
+        <br>
+        <br>
+     	<h2>Hello <i><%= user.email %> </i></h2>
+        <h2>Your Favorites:</h2>
 
 <br>
 
@@ -25,8 +27,39 @@
 			<% }); %>
 	</ul>
 
-<form method="POST" action="/logout?_method=DELETE">
-			<button>Logout</button>
-		</form>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Dining</h2>
+           <ul>
+            <li><a href="/coffeeshops"><h4>Coffee Shops</h4></a></li>
+            <li><a href="/restaurants"><h4>Restaurants</h4></a></li>
+            <li><a href="/bars"><h4>Bars</h4></a></li>
+          </ul>
+          
+        </div>
+        <div class="col-md-4">
+          <h2>Getting Around</h2>
+          <ul>
+            <li><a href="/cabs"><h4>Cab Services</h4></a></li>
+            <li><a href="/publictransit"><h4>Public Transit</h4></a></li>
+            <li><a href="/biking"><h4>Biking</h4></a></li>
+          </ul>
+       </div>
+        <div class="col-md-4">
+          <h2>Activities</h2>
+           <ul>
+            <li><a href="/museums"><h4>Museums</h4></a></li>
+            <li><a href="/parks"><h4>Parks</h4></a></li>
+            <li><a href="/kids"><h4>Kids</h4></a></li>
+          </ul>
+        </div>
+
+        <p> Are you looking for something not listed? Cick below to create a unique search.</p>       
+        <p><center><a class="btn btn-primary btn-lg" href="/search" role="button">Refine My Search &raquo;</a></center></p>
+      </div>
+    </div>
+
+
 </body>
 </html>

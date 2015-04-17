@@ -48,7 +48,7 @@ app.use(methodOverride("_method"));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 //renders home page
 app.get('/', function (req, res) {
@@ -117,7 +117,7 @@ app.post('/login', function(req,res){
         res.render('guests/profile', {user: user});
       } else {
         console.log("Nadda, no user.")
-        res.redirect("/nologin");
+        res.redirect("guests/nologin");
       }
     }); 
 });

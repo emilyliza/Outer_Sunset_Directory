@@ -1,6 +1,7 @@
 body {
   padding-top: 50px;
   padding-bottom: 20px;
+  background-color: color;
 }
 /*
 .jumbotron {
@@ -15,9 +16,27 @@ background-size: cover;
     background-size: 100% 100%;
 }*/
 
-
-.jumbotron {
-	background-color: green;
-	background-size: cover;
+h2 {
+  font-size: 40px;
+  color: maroon;
 }
+h3 {
+  color: maroon;
+}
+.img{
+  background-size: cover;
+}
+.jumbotronTransp {
+ padding: 30px;
+ margin-bottom: 30px;
+ font-size: 21px;
+ font-weight: 200;
+ line-height: 2.1428571435;
+ color: inherit;
+ background-color: transparent;
+} 
   
+#test {
+  background: url("http://i.imgur.com/8dS0M6G.jpg") no-repeat center center;
+
+}
