@@ -9,12 +9,15 @@
    </header>
   
 
-  <div class="jumbotron">
+  <div class="jumbotron" id="pic2">
       <div class="container">
         <br>
         <br>
         <h2>Greetings!</h2>
-        <p> Please log in to browse local businesses and create a list of your favorite places.  
+        <h3> Please log in to browse local businesses and create a list of your favorite places. </h3>
+        <% if(error !== null) { %>
+          <p><strong style="color: red"><%= error %></strong></p>
+        <% } %>
     <form method="POST" action="/login"> 
     <div>
       <input type="text" name="email" placeholder="email">
@@ -25,8 +28,15 @@
     <br>
     <button class="btn btn-primary btn-lg">Login</button>
   </form>
-</div>
-      <hr>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </div>
+     
 
       <footer>
         <p>&copy; Emily Hittle, GA</p>

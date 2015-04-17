@@ -10,15 +10,17 @@
 
 <body>
 
-<div class="jumbotron">
+<div class="jumbotron" id="pic3">
       <div class="container">
-        <br>
-        <br>
      	<h2>Hello <i><%= user.email %> </i></h2>
-        <p>Please take some time to view the wonderful eateries, parks and other attractions in the Outer Sunset. If you find something you like, click the favorite button (below each business description) and it will be saved to your favorites. </p>
-
+        <h4>Please take some time to view the wonderful eateries, parks and other attractions in the Outer Sunset. If you find something you like, click the favorite button (below each business description) and it will be saved to your favorites. </h4>
+        <br>
+        <br>
+   </div>
+ </div>
+ <div class = "container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" id="one">
           <h2>Dining</h2>
            <ul>
             <li><a href="/coffeeshops"><h4>Coffee Shops</h4></a></li>
@@ -27,7 +29,7 @@
           </ul>
           
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="one">
           <h2>Getting Around</h2>
           <ul>
             <li><a href="/cabs"><h4>Cab Services</h4></a></li>
@@ -35,7 +37,7 @@
             <li><a href="/biking"><h4>Biking</h4></a></li>
           </ul>
        </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="one">
           <h2>Activities</h2>
            <ul>
             <li><a href="/museums"><h4>Museums</h4></a></li>
@@ -43,15 +45,16 @@
             <li><a href="/kids"><h4>Kids</h4></a></li>
           </ul>
         </div>
-
-        <p> Are you looking for something not listed? Cick below to create a unique search.</p>       
-        <p><center><a class="btn btn-primary btn-lg" href="/search" role="button">Refine My Search &raquo;</a></center></p>
+</div>
+<div class = "container">
+      <div class="row">
+         <div class="col-md-7 col-md-offset 5" id="par">
+        <br>
+        <p> Are you looking for something not listed?    <a class="btn btn-primary btn-sm" href="/search" role="button">Refine Your Search &raquo;</a> </p>  
+        </div>
       </div>
-    </div>
+      </div>
+ 
 
-
-<form method="POST" action="/logout?_method=DELETE">
-			<button>Logout</button>
-		</form>
 </body>
 </html>

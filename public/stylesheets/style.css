@@ -1,20 +1,10 @@
 body {
   padding-top: 50px;
   padding-bottom: 20px;
-  background-color: color;
+  background-color: #2E2E2E;
+  color: black;
 }
-/*
-.jumbotron {
-background: url("../images/Cliff_House_from_Ocean_Beach.jpg") no-repeat center center !important;
-background-size: cover;
-}*/
-/*.jumbotron {
-    background: url("Cliff_House_from_Ocean_Beach.jpg") no-repeat center center !important; 
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
-}*/
+
 
 h2 {
   font-size: 40px;
@@ -23,9 +13,26 @@ h2 {
 h3 {
   color: maroon;
 }
-.img{
-  background-size: cover;
+
+a {
+    color: #084B8A;
 }
+#cont {
+  background-color: #2E2E2E;
+}
+#one {
+    border-style: inset;
+    border-color: #2E3B0B;
+    border-width: 5px;
+    background-color: #F5ECCE;
+}
+
+#two {
+    border-style: inset;
+    border-color: #98bf21;
+    border-width: 5px;
+}
+
 .jumbotronTransp {
  padding: 30px;
  margin-bottom: 30px;
@@ -39,4 +46,32 @@ h3 {
 #test {
   background: url("http://i.imgur.com/8dS0M6G.jpg") no-repeat center center;
 
+}
+#pic1 {
+  background: url("http://upload.wikimedia.org/wikipedia/commons/b/b6/Golden_Gate_-_Lands_End_-_Point_Lobos_2009.jpg")no-repeat center center;;
+}
+#pic2 {
+  background: url("https://farm4.staticflickr.com/3126/2596125700_5910e1b08b_o.jpg")no-repeat center center;
+}
+#pic3 {
+  background: url("http://i.imgur.com/fwwtkUr.png")no-repeat center center;
+}
+#pic4 {
+  background: url("http://sfcitizen.com/blog/wp-content/uploads/2012/02/img_1055-copy1.jpg")no-repeat center center;
+  width: 100%;
+}
+#white {
+  font-weight: bold;
+}
+
+ 
+#par {
+  color:white;
+}
+
+footer {
+  background-color: #1C1C1C;
+  color: grey;
+  bottom:0;
+  width:100%;
 }

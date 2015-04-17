@@ -11,7 +11,7 @@ var express = require("express"),
 var env = process.env;
 
 var yelp = require("yelp").createClient({
-  consumer_key: "AnWMDQQ2OarkWg9FlxgOmA",
+consumer_key: "AnWMDQQ2OarkWg9FlxgOmA",
   consumer_secret: "c3SE2i_3wfBz0epXNsJ8RXGEjNI",
   token: "MYTBGZZO0XhGX0vmAcxzt_tXXduE5_m6",
   token_secret: "uxgqlThRXQpvAizY-_Nm8BbqhC0"
@@ -55,11 +55,6 @@ app.get('/', function (req, res) {
 	res.render('site/index');
 });
 
-//renders Oops page
-app.get('/nologin', function(req, res) {
-    res.render('guests/nologin');
-});
-
 //renders sign up page
 app.get('/signup', function(req, res) {
 	res.render('guests/signup');
@@ -71,7 +66,8 @@ app.get('/login', function(req,res){
     if (guest) {
       res.redirect('/profile');
     } else {
-      res.render('guests/login');
+      var error = null;
+      res.render('guests/login', {error: error});
     }
   });
  }); 
@@ -112,16 +108,18 @@ app.post('/login', function(req,res){
   var password = req.body.password;
   db.User.authenticate(email,password)
     .then(function(user){
-      if(user) {
+      if (user === null) {
+        console.log('Incorrect Username!');
+        var error = 'Incorrect Username!';
+        res.render("guests/login", {error: error});
+      } else {
         req.login(user);
         res.render('guests/profile', {user: user});
-      } else {
-        console.log("Nadda, no user.")
-        res.redirect("guests/nologin");
       }
     }); 
 });
 
+//renders search page
 app.get('/search', function(req, res) {
   var bsearch = req.query.q;
   if (!bsearch) {
@@ -273,9 +271,8 @@ app.get('/museums', function(req, res) {
 });
 
 
-
+//resets database, erases all existing data
 app.get('/sync', function(req, res) {
-  // Be careful, deletes all data in your database
   db.sequelize.sync({force: true}).then(function() {
     res.send("Database sync successful!");
   })

@@ -10,26 +10,33 @@
 
 <body>
 
-<div class="jumbotron">
+<div class="jumbotron" id="pic4">
       <div class="container">
+      <h2>Hello <i><%= user.email %> </i></h2>
+      <br>
+      <br>
         <br>
         <br>
-     	<h2>Hello <i><%= user.email %> </i></h2>
+   </div>
+ </div>
+  <div class="container" id="whte">
+       <div class="row">
+          <div class="col-md-12">
         <h2>Your Favorites:</h2>
-
 <br>
-
 	<ul>
 			<% bus.forEach(function (p){ %>
 				<li>
 					Business name: <%= p.businessName %>
 				</li>
 			<% }); %>
-	</ul>
-
-
+	 </ul>
+  </div>
+  </div>
+</div>
+<div class = "container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" id="one">
           <h2>Dining</h2>
            <ul>
             <li><a href="/coffeeshops"><h4>Coffee Shops</h4></a></li>
@@ -38,7 +45,7 @@
           </ul>
           
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="one">
           <h2>Getting Around</h2>
           <ul>
             <li><a href="/cabs"><h4>Cab Services</h4></a></li>
@@ -46,7 +53,7 @@
             <li><a href="/biking"><h4>Biking</h4></a></li>
           </ul>
        </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="one">
           <h2>Activities</h2>
            <ul>
             <li><a href="/museums"><h4>Museums</h4></a></li>
@@ -60,6 +67,6 @@
       </div>
     </div>
 
-
+  </div>
 </body>
 </html>
