@@ -5,6 +5,15 @@ body {
   color: black;
 }
 
+.btn-primary {
+  background: #086A87;
+  color: #ffffff;
+}
+
+.btn-success {
+  background: #088A4B;
+  color: #ffffff;
+}
 
 h2 {
   font-size: 40px;
@@ -16,17 +25,31 @@ h3 {
 h5 {
   color: white;
 }
+h6 {
+  font-size: 40px;
+  color: white;
+}
+
 a {
     color: #084B8A;
 }
+
+.taco {
+  display: inline;
+}
+
+.taco li {
+  list-style-type: none;
+}
+
 #cont {
   background-color: #2E2E2E;
 }
 #one {
     border-style: inset;
-    border-color: #2E3B0B;
-    border-width: 5px;
-    background-color: #F5ECCE;
+    border-color: #A4A4A4;
+    border-width: 10px;
+    background-color: #FFFFEB;
 }
 
 #two {

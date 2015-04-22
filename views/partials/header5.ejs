@@ -11,7 +11,9 @@
         </div>
           <form class="navbar-form navbar-right" method="POST"  action="/logout?_method=DELETE">
               <div class="form-group">
-                 <button class="btn btn-success">Log Out </button>
+                <form method="POST" action="/logout?_method=DELETE">
+            <a class="navbar-brand" href="/logout">Log Out</a>
+             </form>
             </div>
             
           </form>

@@ -13,9 +13,9 @@
         <br>
         <br>
         <h2> Bars: </h2> 
-
+  <div class="taco">
         <% businesses.forEach(function(business){ %>
-	<ul>
+  <ul>
 		<li>Name: <%= business.name %></li>
 		<li>Phone: <%= business.display_phone %></li>
 		<li><embed src="<%= business.image_url %>"></li>
@@ -29,7 +29,7 @@
 
 	</ul>
 <% }) %>
-        
+        </div>
       </div>
     </div>  
 <footer>

@@ -19,18 +19,12 @@
   <body id="cont">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <div class="navbar-form navbar-left">
           <a class="navbar-brand" href="/">Greetings Airbnb Guests!</a>
         </div>
         <form class="navbar-form navbar-right">
             <div class="form-group">
-            <a class="btn btn-success" href="/login" role="button">Log in &raquo;</a>
+              <a class="navbar-brand" href="/login">Log In</a>
             </div>
             
   </form>
@@ -51,8 +45,7 @@
       </div>
     </div>
 
-    <div class="container" >
-      <!-- Example row of columns -->
+    <div class = "container">
       <div class="row">
         <div class="col-md-4" id="one">
           <h2>Dining</h2>
@@ -64,7 +57,7 @@
           
         </div>
         <div class="col-md-4" id="one">
-          <h2>Getting Around</h2>
+          <h2>Travel</h2>
           <ul>
             <li><a href="/cabs"><h4>Cab Services</h4></a></li>
             <li><a href="/publictransit"><h4>Public Transit</h4></a></li>
@@ -78,9 +71,12 @@
             <li><a href="/parks"><h4>Parks</h4></a></li>
             <li><a href="/kids"><h4>Kids</h4></a></li>
           </ul>
+        </div>
 
+        <p> Are you looking for something not listed? Cick below to create a unique search.</p>       
+        <p><center><a class="btn btn-primary btn-lg" href="/search" role="button">Refine My Search &raquo;</a></center></p>
+      </div>
     </div>
-    <br>
    <div>
       <footer>
         <p>&copy; Emily Hittle, GA</p>

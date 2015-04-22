@@ -14,54 +14,25 @@
       <div class="container">
       <h2>Hello <i><%= user.email %> </i></h2>
       <br>
-      <br>
-       <br>
    </div>
  </div>
   <div class="container" id="whte">
        <div class="row">
-          <div class="col-md-12">
-        <h2>Your Favorites:</h2>
+          <div class="col-md-12" id="white">
+        <h6>Your Favorites:</h6>
 	<ul>
 			<% bus.forEach(function (p){ %>
-				<li>
-				<h5>	Business name: <%= p.businessName %> </h5>
+				<li id="taco">
+				<h5> <%= p.businessName %> </h5>
 				</li>
 			<% }); %>
 	 </ul>
   </div>
   </div>
 </div>
-<div class = "container">
-      <div class="row">
-        <div class="col-md-4" id="one">
-          <h2>Dining</h2>
-           <ul>
-            <li><a href="/coffeeshops"><h4>Coffee Shops</h4></a></li>
-            <li><a href="/restaurants"><h4>Restaurants</h4></a></li>
-            <li><a href="/bars"><h4>Bars</h4></a></li>
-          </ul>
-          
-        </div>
-        <div class="col-md-4" id="one">
-          <h2>Getting Around</h2>
-          <ul>
-            <li><a href="/cabs"><h4>Cab Services</h4></a></li>
-            <li><a href="/publictransit"><h4>Public Transit</h4></a></li>
-            <li><a href="/biking"><h4>Biking</h4></a></li>
-          </ul>
-       </div>
-        <div class="col-md-4" id="one">
-          <h2>Activities</h2>
-           <ul>
-            <li><a href="/museums"><h4>Museums</h4></a></li>
-            <li><a href="/parks"><h4>Parks</h4></a></li>
-            <li><a href="/kids"><h4>Kids</h4></a></li>
-          </ul>
-        </div>
 
-        <p> Are you looking for something not listed? Cick below to create a unique search.</p>       
-        <p><center><a class="btn btn-primary btn-lg" href="/search" role="button">Refine My Search &raquo;</a></center></p>
+              
+        <p><center><a class="btn btn-primary btn-lg" href="/" role="button"> Search more businesses &raquo;</a></center></p>
       </div>
     </div>
 
