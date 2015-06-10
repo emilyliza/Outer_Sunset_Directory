@@ -20,6 +20,7 @@ consumer_key: "AnWMDQQ2OarkWg9FlxgOmA",
 
 app.set("view engine", "ejs");
 
+
 app.use(session({
   secret: 'strawberries',
   resave: false,
@@ -166,10 +167,23 @@ app.post('/favorites', function(req,res){
 });
 
 //allows user to sign out & redirects to log in page
-app.delete('/logout', function(req,res){
-  req.logout();
-  res.render('site/index');
+app.get('/logout', function(req,res){
+  // req.logout();
+//   console.log("is the person being logged out?")
+//   res.redirect('/login');
+// });
+
+req.session.destroy(function(err){
+  if(err){
+  console.log(err);
+  }
+  else
+  {
+  res.redirect('/login');
+  }
 });
+});
+
 
 //renders dining page
 app.get('/dining', function(req, res) {

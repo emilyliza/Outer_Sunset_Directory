@@ -13,32 +13,32 @@
       <div class="container">
         <br>
         <br>
-        <h2>Search for fabulous places...</h2>  
+        <h2>Search for local businesses...</h2>  
     <form method="GET" action="/search">
     <div><input type="text" name="q" placeholder="Search">
     <button class= "btn btn-primary btn-sm">Submit</button></div>
   </form>
 <br>
-	 <% businesses.forEach(function(business){ %>
-	<ul>
-		<li>Name: <%= business.name %></li>
-		<li>Phone: <%= business.display_phone %></li>
-		<li><embed src="<%= business.image_url %>"></li>
-		<li>Rating:<%= business.rating %></li>
-		https://s3-media4.fl.yelpassets.
-		<li>embed src="https://s3-media4.fl.yelpassets.com/assets/2/www/img/9d213bfb766e/logo/logo_tiny.png"></li>
-		<li><form method="POST" action="/favorites">
-		      <input name="name" value="<%= business.name %>" hidden>
-		      <input name="phone" value="<%= business.phone %>" hidden>
-		      <input name="url" value="<%= business.url %>" hidden>
-		      <button>Favorite</button>
-        	</form>	
-        </li>	
+ <div class="row">
+          <div class="col-sm-4">.col-sm-4</div>
+            <% businesses.forEach(function(business){ %>
 
-	</ul>
-<% }) %>
-</div>
-      <hr>
+             <ul class="list-group">
+              <li class="list-group-item"><h3><%= business.name %></h3></li>
+              <li class="list-group-item"><%= business.display_phone %></li>
+              <li class="list-group-item"><embed src="<%= business.image_url %>"></li>
+              <li class="list-group-item">Rating:<%= business.rating %></li>
+                <li class="list-group-item"><form method="POST" action="/favorites">
+                  <input name="name" value="<%= business.name %>" hidden>
+                  <input name="phone" value="<%= business.phone %>" hidden>
+                  <input name="url" value="<%= business.url %>" hidden>
+                  <button>Favorite</button>
+                </form> 
+              </li> 
+            </ul>
+          <% }) %> 
+          </div>
+        </div>
 
       <footer>
         <p>&copy; Emily Hittle, GA</p>
