@@ -1,1 +1,1 @@
-This is the first project I completed while enrolled in General Assembly's Web Development Immersive. I used Node.js, JavaScript, Express and the YELP API to create a directory places to visit in the Outer Sunset district of San Francisco. 
+This is the first project I completed while enrolled in General Assembly's Web Development Immersive. I used Node.js, JavaScript, Express and the YELP API to create a directory of places to visit in the Outer Sunset district of San Francisco. 
